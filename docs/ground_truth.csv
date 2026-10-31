@@ -1,0 +1,2 @@
+query,expected_paths
+connection refused,errors/postgres.png

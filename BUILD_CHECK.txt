@@ -1,0 +1,26 @@
+go mod tidy:
+go: downloading github.com/fsnotify/fsnotify v1.8.0
+go: downloading modernc.org/sqlite v1.38.2
+go: screensift/cmd: open /home/oai/.cache/go-build/be/be588b6679630cfcfa65110e9acf9bbc9f4fcb47fde30d40bd5b1987bff4d54e-a: permission denied
+go: screensift/data: open /home/oai/.cache/go-build/95/95384dfb84b91c1b5843a1c2932ed43b181769985400df0256b507625f091b41-a: permission denied
+go: screensift/internal: open /home/oai/.cache/go-build/6b/6b335ed75530f5e6f59b764ff38b865e4fca51ed8ab1c0ee865f397a3f9ae15a-a: permission denied
+go: screensift/screenshots: open /home/oai/.cache/go-build/fc/fc1547d5919499223d4f16b063d532f573acfe7ad584d84ab85e0624187eb4a8-a: permission denied
+go: screensift/internal/indexer imports
+	github.com/fsnotify/fsnotify: open /home/oai/go/pkg/mod/cache/download/github.com/fsnotify/fsnotify/@v/v1.8.0.lock: permission denied
+go: screensift/internal/store imports
+	modernc.org/sqlite: open /home/oai/go/pkg/mod/cache/download/modernc.org/sqlite/@v/v1.38.2.lock: permission denied
+
+
+go test ./...:
+internal/indexer/indexer.go:16:2: missing go.sum entry for module providing package github.com/fsnotify/fsnotify (imported by screensift/internal/indexer); to add:
+	go get screensift/internal/indexer
+internal/store/store.go:13:2: missing go.sum entry for module providing package modernc.org/sqlite (imported by screensift/internal/store); to add:
+	go get screensift/internal/store
+
+
+go test -race ./...:
+internal/indexer/indexer.go:16:2: missing go.sum entry for module providing package github.com/fsnotify/fsnotify (imported by screensift/internal/indexer); to add:
+	go get screensift/internal/indexer
+internal/store/store.go:13:2: missing go.sum entry for module providing package modernc.org/sqlite (imported by screensift/internal/store); to add:
+	go get screensift/internal/store
+package screensift/cmd/screensift: cannot find package

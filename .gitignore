@@ -1,52 +1,7 @@
-# ==========================================
-# Go Language
-# ==========================================
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-ScreenSift
-___go_build_ScreenSift*
-
-# Test binary, built with `go test -c`
-*.test
-
-# Output of the go coverage tool
-*.out
-
-# Go workspace file (if you use Go 1.18+ workspaces)
-go.work
-go.work.sum
-
-# Dependency directories (uncomment if you use vendoring)
-# vendor/
-
-# ==========================================
-# JetBrains IDEs (GoLand)
-# ==========================================
-.idea/
-*.iml
-*.ipr
-*.iws
-*.swp
-*.swo
-
-# ==========================================
-# macOS
-# ==========================================
+/data/*.db
+/data/*.db-shm
+/data/*.db-wal
+screenshots/*
+!screenshots/.gitkeep
+bin/
 .DS_Store
-.AppleDouble
-.LSOverride
-._*
-.Trashes
-.Spotlight-V100
-
-# ==========================================
-# Project Specific (Optional)
-# ==========================================
-# Uncomment the lines below if you have a folder
-# for test screenshots and don't want to commit them to Git.
-# screenshots/
-# testdata/*.png
